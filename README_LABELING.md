@@ -42,7 +42,7 @@ where
 
 * ```flagOper``` is a boolean that specifies if the number of transactions should be considered (suggestion: True).
 
-* ```clean``` is a boolean that specifies if all the transactions causing a loss should be removed (suggestion: I STRONGLY ADVISED THAT YOU SHOULD SET TO True).
+* ```clean``` is a boolean that specifies if all the transactions causing a loss should be removed (suggestion: I STRONGLY ADVISE YOU TO SET THIS TO True).
 
 * ```execPrice``` is a string that specifies the execution price that should be used, options are:
     - 'open': Open price.
