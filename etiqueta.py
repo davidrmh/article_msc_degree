@@ -615,9 +615,9 @@ def etiquetaMetodo2(datos,numGen=30,popSize=50, flagOper = True, limpia = True, 
                 contadorFlat = contadorFlat + 1
 
         #Para ahorrar tiempo se rompe el loop si mejorFitness > 0.2
-        if mejorFitness > 0.2:
-            print "Mejor fitness = " + str(round(np.max(mejorFitness),6)) +   " se rebasa el umbral de 0.2"
-            break    
+        #if mejorFitness > 0.2:
+        #    print "Mejor fitness = " + str(round(np.max(mejorFitness),6)) +   " se rebasa el umbral de 0.2"
+        #    break    
 
         #actualiza probabilidades
         probas=actualizaProbabilidades(mejores)
