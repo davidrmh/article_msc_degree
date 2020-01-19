@@ -12,7 +12,7 @@ import indicadores as ind
 2. Read the data from the csv of Yahoo Finance
 
 ```python
-data = ind.leeTable(path_to_csv_file)
+data = ind.leeTabla(path_to_csv_file)
 ```
 
 3. Create the blocks to be labeled
