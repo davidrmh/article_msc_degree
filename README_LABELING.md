@@ -42,7 +42,7 @@ where
 
 * ```flagOper``` is a boolean that specifies if the number of transactions should be considered (suggestion: True).
 
-* ```clean``` is a boolean that specifies if all the transactions causing a loss should be removed (suggestion: I STRONGLY ADVISE YOU TO SET THIS TO True).
+* ```clean``` is a boolean that specifies if repeated signals should be removed (suggestion: I STRONGLY ADVISE YOU TO SET THIS TO ```True``` SINCE WE ARE UNDER THE ASSUMPTION OF USING ALL THE MONEY AVAILABLE / SELLING ALL THE STOCKS WE ARE HOLDING).
 
 * ```execPrice``` is a string that specifies the execution price that should be used, options are:
     - 'open': Open price.
@@ -58,3 +58,14 @@ This function will show some messages of the progress of the EDA algorithm
 Fin de la generacion 0 #Displays the end of the current generation
 Mejor fitness hasta el momento -0.493349 #Displays the best fitness so far
 ```
+5. Save the labeled data
+
+```python
+dat.guardaCSV(lab_blocks, folder_path, prefix)
+```
+where 
+* ```lab_blocks``` is a list with the labeled blocks.
+
+* ```folder_path``` is a string with the path of the folder where the paths are going to be stored
+
+* ```prefix``` is a string indicating the prefix of each file.
