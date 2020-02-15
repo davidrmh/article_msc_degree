@@ -1,9 +1,10 @@
-# Procedure to create the training sets.
+# Procedimiento para crear los conjuntos de entrenamiento
 
-**This is run in an interactive python shell**.
-**This should be executed after labeling the data (see README_LABELING)**.
+**Lo siguiente se ejecuta en una consola interactiva de python**.
 
-1. Import the following modules
+**Esto debe de ejecutarse después de etiquetar los datos (ver README_LABELING)**.
+
+1. Importar los siguientes módulos.
 
 ```python
 import json
@@ -11,13 +12,13 @@ import datasets as dat
 import indicadores as ind
 ```
 
-2. Read the data from the csv of Yahoo Finance
+2. Leer los datos del CSV de Yahoo Finance.
 
 ```python
 data = ind.leeTabla(path_to_csv_file)
 ```
 
-3. Read the json file with the dictionary used in order to calculate the technical indicators (features).
+3. Leer el archivo ```json``` con el diccionario utilizado para calcular los indicadores técnicos.
 
 ```python
 f = open(path_to_json_file)
@@ -25,21 +26,21 @@ dicc = json.load(f)
 f.close()
 ```
 
-4. Use the function ```dat.creaEntrenamiento``` in order to create the training datasets
+4. Utilizar la función ```dat.creaEntrenamiento```
 
 ```python
 dat.creaEntrenamiento(data, dicc, arch_eti, ruta_eti, ruta_dest, activo)
 ```
-where:
+en donde:
 
-* ```data``` is a pandas dataframe with data of Yahoo Finance CSV file.
+* ```data``` es un pandas dataframe con los datos del CSV de  Yahoo Finance.
 
-* ```dicc``` is a dictionary.
+* ```dicc``` es un diccionario que contiene los parámetros de cada indicador técnico.
 
-* ```arch_eti``` is a string that specifies the path of the CSV file containing the name of each labeled dataset.
+* ```arch_eti``` es un string que contiene la ruta del archivo CSV que contiene el nombre de cada conjunto etiquetado (ver el archivo archivos_etiquetados.csv)
 
-* ```ruta_eti``` is a string that specifies the path to the folder that contains the labeled datasets.
+* ```ruta_eti``` es un string que especifica la ruta de la carpeta que contiene los conjuntos de datos etiquetados.
 
-* ```ruta_dest```is a string that specifies the path to the folder where all the training datasets are going to be stored.
+* ```ruta_dest``` es un string que indica la ruta de la carpeta en donde se guardarán los archivos de entrenamiento.
 
-* ```activo``` is an auxiliary string that is used as a prefix for the name of each training dataset.
+* ```activo```es un string que se utiliza como prefijo para el nombre de cada archivo de entrenamiento.
