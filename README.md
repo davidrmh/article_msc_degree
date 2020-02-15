@@ -1,16 +1,17 @@
-# Learning trading rules for the mexican stock market: A symbolic approach
+# Aprendizaje de reglas para operar en el mercado accionario
 
-This repository contains a continuation of the research I made in my master thesis in computer science ```Aprendizaje de reglas para operar en el mercado accionario```.
+Este repositorio contiene los códigos relacionados a mi tesis de maestría:
+```Aprendizaje de reglas para operar en el mercado accionario```.
 
 
-## How to create the training datasets
-1. Follow the instructions in the file ```README_LABELING.md```.
+## ¿Cómo crear los conjuntos de entrenamiento?
+1. Sigue las instrucciones del archivo ```README_LABELING.md```.
 
-2. Follow the instructions in the file ```README_TRAINING_SETS.md```.
+2. Después sigue las instrucciones del archivo ```README_TRAINING_SETS.md```.
 
-# Dependencies
+# Dependencias
 
-## Python 2.7.13 dependencies
-* ```pandas, numpy``` (any version should work).
-* Package for calculating technical indicators https://github.com/bukosabino/ta
+## Dependencias de Python 2.7.13 
+* ```pandas, numpy``` (cualquier versión compatible debe de funcionar).
+* Paquete para calcular las indicadores técnicos https://github.com/bukosabino/ta
 
