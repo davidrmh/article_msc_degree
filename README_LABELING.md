@@ -1,71 +1,66 @@
-# Procedure to create the labels in the data
+# Procedimiento para etiquetar los datos
 
-**This is run in an interactive python shell**
+**Lo siguiente se ejecuta en una consola interactiva de python**.
 
-1. Import the following modules
+1. importar los siguientes módulos
 
 ```python
 import datasets as dat
 import indicadores as ind
 ```
 
-2. Read the data from the csv of Yahoo Finance
+2. Leer los datos del CSV de Yahoo Finance
 
 ```python
 data = ind.leeTabla(path_to_csv_file)
 ```
 
-3. Create the blocks to be labeled
+3. Crea los bloques que se etiquetarán
 
 ```python
-blocks = dat.separaBloques(data, block_size, start_date) #For non-overlapping blocks
-blocks = dat.bloquesDeslizantes(datos, block_size, window_size, start_date) #For overlapping blocks
+blocks = dat.separaBloques(data, block_size, start_date) #Bloques sin traslape
+blocks = dat.bloquesDeslizantes(datos, block_size, window_size, start_date) #Bloques con traslape
 ```
-where
+en donde:
 
-* ```block_size``` is an integer that specifies the size of each block.
+* ```block_size``` es un entero que especifíca el tamaño de cada bloque.
 
-* ```start_date``` is a string with the format 'YYYY-MM-DD' that indicates the starting date.
+* ```start_date``` es una cadena con formato 'YYYY-MM-DD' que indica la fecha de inicio.
 
-* ```window_size``` is an integer that specifies the window size for overlapping blocks.
+* ```window_size``` es un entero que especifica el tamaño de la ventanada deslizante (únicamente para bloques con traslape).
 
-4. Start the labeling process (this might take a while so go and grab a cup of coffee :-p )
+4. Inicia el proceso de etiquetado (esto puede tardar bastante tiempo, depende de los parámetros).
 
 ```python
 lab_blocks = dat.etiquetaBloques(blocks,numGen ,popSize , flagOper, clean, execPrice, execStep)
 ```
-where
+en donde:
 
-* ```numGen``` is an integer that specifies the number of generations (suggestion: 30).
+* ```numGen``` es un entero que especifica el número de generaciones (sugerencia: 30).
 
-* ```popSize``` is an integer that specifies the population size (suggestion: 50).
+* ```popSize``` es un entero que especifica es tamaño de la población (sugerencia: 50).
 
-* ```flagOper``` is a boolean that specifies if the number of transactions should be considered (suggestion: True).
+* ```flagOper``` es un booleano que especifica si el número de transacciones debe de considerarse (sugerencia: True).
 
-* ```clean``` is a boolean that specifies if repeated signals should be removed (suggestion: I STRONGLY ADVISE YOU TO SET THIS TO ```True``` SINCE WE ARE UNDER THE ASSUMPTION OF USING ALL THE MONEY AVAILABLE / SELLING ALL THE STOCKS WE ARE HOLDING).
+* ```clean``` es un booleano que especifica si las señales repetidas consecutivas deben de eliminarse (sugerencia: Establecer como ```True``` ya que se trabaja con el supuesto de comprar/vender todo lo posible).
 
-* ```execPrice``` is a string that specifies the execution price that should be used, options are:
-    - 'open': Open price.
-    - 'mid': Mid price.
-    - 'adj.close': Adjusted closed price (this is the suggested parameter).
-    - 'close': Close price.
+* ```execPrice``` string que especifica el tipo de precio de ejecición:
+    - 'open': Precio de apertura.
+    - 'mid': Precio mid (promedio de máximo y mínimo).
+    - 'adj.close': Cierre ajustado.
+    - 'close': Cierre.
 
-* ```h``` is an integer indicating the time in the future, after receiving the signal, that the execution price is going to be calculated. For example if the signal is received at time $t$ and $h = 1$, then the execution price is calculated with the prices from $t + h = t + 1$ (suggestion h = 1).
+* ```h``` es un entero que indica el momento de ejecución después de recibir una señala. Por ejemplo si la señal se recibe en el tiempo $t$ y $h = 1$, entonces el precio de ejecución se calcula con los precios de  $t + h = t + 1$ (sugerencia h = 1).
 
-This function will show some messages of the progress of the EDA algorithm
-
-```
-Fin de la generacion 0 #Displays the end of the current generation
-Mejor fitness hasta el momento -0.493349 #Displays the best fitness so far
-```
-5. Save the labeled data
+5. Guarda los datos etiquetados
 
 ```python
 dat.guardaCSV(lab_blocks, folder_path, prefix)
 ```
-where 
-* ```lab_blocks``` is a list with the labeled blocks.
+en donde: 
 
-* ```folder_path``` is a string with the path of the folder where the paths are going to be stored
+* ```lab_blocks``` es una lista con los bloques etiquetados.
 
-* ```prefix``` is a string indicating the prefix of each file.
+* ```folder_path``` es un string con la ruta del folder en donde se guardarán los datos etiquetados.
+
+* ```prefix``` es una cadena auxiliar para establecer un prefijo al nombre de cada archivo.
