@@ -9,12 +9,11 @@ Este repositorio contiene los códigos relacionados a mi tesis de maestría:
 
 2. Después sigue las instrucciones del archivo ```README_TRAINING_SETS.md```.
 
-# Dependencias
-
-
 ## Experimentos
 
 * Leer el archivo ```README.md``` dentro de la carpeta ```experimentos```.
+
+## Dependencias
 
 ## Dependencias de Python 2.7.13 
 * ```pandas, numpy``` (cualquier versión compatible debe de funcionar).
