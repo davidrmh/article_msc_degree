@@ -23,4 +23,17 @@
 
 2. Ejecutar la función ```AQ.main``` con sus respectivos parámetros.
 
+# Evaluación de resultados
 
+1. Con los archivos generados en los experimentos, actualizar el archivo ```arch_evaluar.csv```, este archivo contiene la lista de archivos que contienen las predicciones para cada período de prueba.
+
+2. **En una sesión interactiva de python** importar el módulo ```metricas```
+```python
+import metricas as met
+```
+
+3. Utilizar la función ```evaluaMetrica``` con los parámetros deseados.
+
+```python
+met.evaluaMetrica(...)
+```
