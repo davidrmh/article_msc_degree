@@ -11,6 +11,11 @@ Este repositorio contiene los códigos relacionados a mi tesis de maestría:
 
 # Dependencias
 
+
+## Experimentos
+
+* Leer el archivo ```README.md``` dentro de la carpeta ```experimentos```.
+
 ## Dependencias de Python 2.7.13 
 * ```pandas, numpy``` (cualquier versión compatible debe de funcionar).
 * Paquete para calcular las indicadores técnicos https://github.com/bukosabino/ta
