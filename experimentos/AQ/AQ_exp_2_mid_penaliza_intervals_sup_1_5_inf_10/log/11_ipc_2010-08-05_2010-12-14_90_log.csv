@@ -1,0 +1,13 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2010-08-17","2010-08-18","Compra",32370.1591353662,"IF Williams.R.14 is (-63.2,-50.9] THEN  is 1; (supportSize=3; laplace=0.8)",3.81609683557558
+"2010-09-14","2010-09-15","Venta por banda superior",32891.2162645237,"IF Williams.R.14 is (-11.9, Inf] and Adj.Close.RSI.14 is (64.8,71.5] THEN  is -1; (supportSize=3; laplace=0.8)",4.34790853312158
+"2010-09-23","2010-09-24","Compra",33351.4264991488,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",5.16269751539157
+"2010-10-01","2010-10-04","Venta por banda superior",33889.0260351563,"IF MFI.14 is (64.2,69.7] THEN  is -1; (supportSize=3; laplace=0.8)",3.99811514432586
+"2010-10-19","2010-10-20","Compra",34762.233784305,"IF Dif.Aroon.25 is (78.5, Inf] and Adj.Close.RSI.14 is (52.2,60.3] THEN  is 1; (supportSize=3; laplace=0.8)",3.84222482640835
+"2010-11-10","2010-11-11","Venta por banda superior",36230.0630714138,"IF Williams.R.14 is (-24.3,-13.2] and Comm.Chan.20.0.015 is (70.1,117] THEN  is -1; (supportSize=3; laplace=0.8)",3.84222482640835
+"2010-11-17","2010-11-18","Compra",36173.6049757112,"IF Williams.R.14 is (-63.2,-50.9] THEN  is 1; (supportSize=3; laplace=0.8)",3.83743078864314
+"2010-11-24","2010-11-25","Venta por banda superior",36945.3309665475,"IF Williams.R.14 is (-11.9, Inf] and Adj.Close.RSI.14 is (64.8,71.5] THEN  is -1; (supportSize=3; laplace=0.8)",4.36924248618914
+"2010-11-25","2010-11-26","Compra",36930.9623975862,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",5.18713163113954
+"2010-12-06","2010-12-07","Venta por banda superior",37833.3378074925,"IF Williams.R.14 is (-13.2, Inf] and Adj.Close.RSI.14 is (69.6, Inf] and MFI.14 is (58.4,65.5] THEN  is -1; (supportSize=3; laplace=0.8)",3.82443411574796
+"2010-12-07","2010-12-08","Compra",37796.4155568912,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",5.1877295905577
+"2010-12-14","2010-12-14","Venta fin periodo",37819.0162795463,"No aplica",0

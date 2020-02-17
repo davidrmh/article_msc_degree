@@ -1,0 +1,3 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2013-02-15","2013-02-18","Compra",44233.5737890625,"IF Comm.Chan.20.0.015 is (-157,-110] THEN  is 1; (supportSize=3; laplace=0.8)",3.78277067007742
+"2013-06-26","2013-06-26","Venta fin periodo",38361.9231886012,"No aplica",0

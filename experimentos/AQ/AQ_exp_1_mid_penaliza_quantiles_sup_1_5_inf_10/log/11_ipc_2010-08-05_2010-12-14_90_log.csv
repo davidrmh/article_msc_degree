@@ -1,0 +1,15 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2010-08-05","2010-08-06","Compra",32937.0983398437,"IF Williams.R.14 is (-9.58,-5.54] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.96222620085953
+"2010-10-01","2010-10-04","Venta por banda superior",33889.0260351563,"IF Comm.Chan.20.0.015 is (109, Inf] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",4.86223471637232
+"2010-10-04","2010-10-05","Compra",34270.0004101563,"IF Williams.R.14 is (-9.58,-5.54] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.97732432441154
+"2010-10-13","2010-10-14","Venta por banda superior",34787.4131104763,"IF Comm.Chan.20.0.015 is (109, Inf] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",4.87733283992433
+"2010-10-14","2010-10-15","Compra",34825.6458255712,"IF Williams.R.14 is (-9.58,-5.54] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.99319918508628
+"2010-10-28","2010-10-29","Venta por banda superior",35378.49810096,"IF Williams.R.14 is (-14.5,-6.99] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",4.88197943041294
+"2010-10-29","2010-11-01","Compra",35807.76100611,"IF Dif.Aroon.25 is (88, Inf] THEN  is 1; (supportSize=3; laplace=0.8)",3.81682092447294
+"2010-11-08","2010-11-09","Venta por banda superior",36410.0806495388,"IF Comm.Chan.20.0.015 is (109, Inf] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",4.89415376439727
+"2010-11-09","2010-11-10","Compra",36359.6333398437,"IF Dif.Aroon.25 is (88, Inf] THEN  is 1; (supportSize=3; laplace=0.8)",3.83292938247716
+"2010-11-24","2010-11-25","Venta por banda superior",36945.3309665475,"IF Comm.Chan.20.0.015 is (109, Inf] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",4.91026222240149
+"2010-11-25","2010-11-26","Compra",36930.9623975862,"IF Dif.Aroon.25 is (88, Inf] THEN  is 1; (supportSize=3; laplace=0.8)",3.85736349822512
+"2010-12-06","2010-12-07","Venta por banda superior",37833.3378074925,"IF Comm.Chan.20.0.015 is (109, Inf] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",4.93469633814945
+"2010-12-09","2010-12-10","Compra",37616.8270803288,"IF Comm.Chan.20.0.015 is (77.2,89.7] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.83870830020084
+"2010-12-14","2010-12-14","Venta fin periodo",37819.0162795463,"No aplica",0

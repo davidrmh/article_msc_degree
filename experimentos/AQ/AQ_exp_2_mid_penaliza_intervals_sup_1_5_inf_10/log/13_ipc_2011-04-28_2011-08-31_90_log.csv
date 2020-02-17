@@ -1,0 +1,3 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2011-05-03","2011-05-04","Compra",35799.987715345,"IF Comm.Chan.20.0.015 is (-157,-110] THEN  is 1; (supportSize=3; laplace=0.8)",3.91551261465693
+"2011-06-28","2011-06-29","Venta por banda superior",36375.0434620388,"IF MFI.14 is (64.2,69.7] THEN  is -1; (supportSize=3; laplace=0.8)",4.02947783956882
