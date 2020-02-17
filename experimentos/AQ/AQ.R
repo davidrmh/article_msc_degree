@@ -87,8 +87,8 @@ AQ.fit <- function(entrena, confidence = 0.9, timesCovered = 1, metodoDisc = "un
 ## SALIDA
 ## Crea archivos en ruta_dest
 ##==============================================================================================
-AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.9, timesCovered = 2, 
-                    metodoDisc = "unsupervised.intervals", param = list(nOfIntervals = 4),
+AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.9, timesCovered = 1, 
+                    metodoDisc = "unsupervised.intervals", param = list(nOfIntervals = 8),
                     ignoraEspera = TRUE, acumReglas = TRUE, top_k = 5, boolForzar = FALSE, boolPenaliza = TRUE){
   
   #Carga los conjuntos de entrenamiento, prueba y etiquetado
