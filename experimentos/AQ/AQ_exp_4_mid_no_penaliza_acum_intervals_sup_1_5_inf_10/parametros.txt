@@ -7,5 +7,6 @@ Ignora espera = TRUE
 Tipo de precio de ejecución = mid h = 1
 Banda superior =  0.015
 Banda inferior =  -0.1
-Acumula reglas = FALSE
+Acumula reglas = TRUE
 Forzar primera compra = FALSE
+top_k = 5
