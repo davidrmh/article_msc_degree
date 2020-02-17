@@ -1,3 +1,0 @@
-"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
-"2015-04-28","2015-04-29","Compra",45250.1048732975,"IF Williams.R.14 is (-59.7,-47.7] THEN  is 1; (supportSize=3; laplace=0.8)",3.74575081644855
-"2015-08-26","2015-08-27","Venta por banda inferior",42795.3236283038,"IF Williams.R.14 is (-49.6,-37.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",4.57399100567377

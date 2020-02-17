@@ -1,7 +1,0 @@
-"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
-"2019-08-20","2019-08-21","Compra",40009.5498294775,"IF Adj.Close.RSI.14 is (44.7,51.9] THEN  is 1; (supportSize=6; laplace=0.875)",6.76854510175066
-"2019-08-28","2019-08-29","Venta por banda superior",41413.9400390625,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",6.15261879451363
-"2019-09-03","2019-09-04","Compra",42236.2628858675,"IF Williams.R.14 is (-25.5,-13.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.807032252517
-"2019-11-01","2019-11-04","Venta por banda superior",43899.9204492187,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",7.63143675808592
-"2019-11-05","2019-11-06","Compra",43699.6759670475,"IF Adj.Close.RSI.14 is (44.7,51.9] THEN  is 1; (supportSize=6; laplace=0.875)",6.79032206930753
-"2019-12-18","2019-12-18","Venta fin periodo",44651.3223928275,"No aplica",0

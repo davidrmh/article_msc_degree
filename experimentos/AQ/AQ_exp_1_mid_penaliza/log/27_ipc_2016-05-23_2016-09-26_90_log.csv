@@ -1,3 +1,0 @@
-"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
-"2016-05-24","2016-05-25","Compra",45803.0521536962,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.63005180148064
-"2016-08-09","2016-08-10","Venta por banda superior",47614.7351372175,"IF Williams.R.14 is (-11.9, Inf] THEN  is -1; (supportSize=3; laplace=0.8)",3.83955376112146
