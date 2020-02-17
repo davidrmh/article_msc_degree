@@ -1,0 +1,3 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla"
+"2010-12-15","2010-12-16","Compra",37835.4738962337,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)"
+"2010-12-30","2011-01-03","Venta por banda superior",38609.9694876788,"IF Comm.Chan.20.0.015 is (86.3, Inf] THEN  is -1; (supportSize=6; laplace=0.75)"

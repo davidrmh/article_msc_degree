@@ -1,0 +1,10 @@
+
+K = 12
+Método discretización = unsupervised.intervals
+Número intervalos = 8
+Ignora espera = TRUE
+Tipo de precio de ejecución = mid h = 1
+Banda superior =  0.015
+Banda inferior =  -0.1
+Acumula reglas = FALSE
+Forzar primera compra = FALSE

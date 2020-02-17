@@ -1,0 +1,5 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla"
+"2012-06-19","2012-06-20","Compra",38936.2835108675,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)"
+"2012-06-28","2012-06-29","Venta por banda superior",39843.4620117188,"IF Comm.Chan.20.0.015 is (86.3, Inf] THEN  is -1; (supportSize=6; laplace=0.75)"
+"2012-07-13","2012-07-16","Compra",40771.6456297575,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)"
+"2012-10-01","2012-10-01","Venta fin periodo",40917.0993164063,"No aplica"

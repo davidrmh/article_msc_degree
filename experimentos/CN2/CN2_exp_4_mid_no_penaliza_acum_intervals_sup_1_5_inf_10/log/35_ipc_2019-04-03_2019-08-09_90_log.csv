@@ -1,0 +1,5 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla"
+"2019-04-05","2019-04-08","Compra",45232.357490485,"IF Dif.Aroon.25 is (73, Inf] THEN  is 1; (supportSize=5; laplace=0.857142857142857)"
+"2019-07-31","2019-08-01","Venta por banda inferior",40539.18319311,"IF Dif.Aroon.25 is (-57,-37.5] THEN  is -1; (supportSize=6; laplace=0.75)"
+"2019-08-02","2019-08-05","Compra",39648.9454882812,"IF Williams.R.14 is (-90.9,-81.8] THEN  is 1; (supportSize=6; laplace=0.75)"
+"2019-08-09","2019-08-09","Venta fin periodo",40205.5447706325,"No aplica"

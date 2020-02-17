@@ -1,0 +1,7 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla"
+"2016-05-23","2016-05-24","Compra",45488.7370755712,"IF Dif.Aroon.25 is [-Inf,-27] THEN  is 1; (supportSize=1; laplace=0.666666666666667)"
+"2016-07-11","2016-07-12","Venta por banda superior",46236.0362254612,"IF Comm.Chan.20.0.015 is (71.9,110] THEN  is -1; (supportSize=3; laplace=0.8)"
+"2016-07-12","2016-07-13","Compra",46516.922221805,"IF Adj.Close.RSI.14 is (64.2,70] THEN  is 1; (supportSize=2; laplace=0.75)"
+"2016-07-20","2016-07-21","Venta por banda superior",47362.1572265625,"IF Comm.Chan.20.0.015 is (110, Inf] THEN  is -1; (supportSize=2; laplace=0.75)"
+"2016-07-25","2016-07-26","Compra",47250.0551710237,"IF Williams.R.14 is (-30.9,-22.8] THEN  is 1; (supportSize=2; laplace=0.75)"
+"2016-08-11","2016-08-12","Venta por banda superior",48212.711059695,"IF Comm.Chan.20.0.015 is (110, Inf] THEN  is -1; (supportSize=2; laplace=0.75)"

@@ -1,0 +1,15 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2009-07-09","2009-07-10","Compra",23557.1414962687,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.79919461678034
+"2009-07-15","2009-07-16","Venta por banda superior",25450.2403275225,"IF Williams.R.14 is (-13, Inf] and MFI.14 is (65.5, Inf] THEN  is -1; (supportSize=3; laplace=0.8)",4.12067978132011
+"2009-07-20","2009-07-21","Compra",26192.5328806087,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.69934321257695
+"2009-07-23","2009-07-24","Venta por banda superior",26614.2127519013,"IF Williams.R.14 is (-13, Inf] and MFI.14 is (65.5, Inf] THEN  is -1; (supportSize=3; laplace=0.8)",4.1367790212529
+"2009-07-24","2009-07-27","Compra",26714.358606145,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.72388507641251
+"2009-07-31","2009-08-03","Venta por banda superior",27369.9787575113,"IF Williams.R.14 is (-13, Inf] and MFI.14 is (65.5, Inf] THEN  is -1; (supportSize=3; laplace=0.8)",4.16132088508846
+"2009-08-04","2009-08-05","Compra",27978.0362890625,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.74220420998638
+"2009-08-27","2009-08-28","Venta por banda superior",28490.5696729763,"IF Williams.R.14 is (-13, Inf] and MFI.14 is (65.5, Inf] THEN  is -1; (supportSize=3; laplace=0.8)",4.17964001866233
+"2009-08-28","2009-08-31","Compra",28429.41680927,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.76410163619786
+"2009-09-08","2009-09-09","Venta por banda superior",29051.9478660863,"IF Williams.R.14 is (-13, Inf] and MFI.14 is (65.5, Inf] THEN  is -1; (supportSize=3; laplace=0.8)",4.20153744487381
+"2009-09-15","2009-09-17","Compra",30021.2115672575,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.78951866283702
+"2009-10-13","2009-10-14","Venta por banda superior",30784.2615014025,"IF Williams.R.14 is (-13, Inf] and MFI.14 is (65.5, Inf] THEN  is -1; (supportSize=3; laplace=0.8)",4.22695447151297
+"2009-10-26","2009-10-27","Compra",29875.2019459887,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.83400462761375
+"2009-11-10","2009-11-11","Venta por banda superior",30915.1580493788,"IF MFI.14 is (43.7,50.8] THEN  is -1; (supportSize=8; laplace=0.8)",8.99191153890591

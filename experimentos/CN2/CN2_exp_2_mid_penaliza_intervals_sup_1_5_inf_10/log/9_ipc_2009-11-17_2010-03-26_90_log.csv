@@ -1,0 +1,7 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2009-11-19","2009-11-20","Compra",30812.8556645637,"IF Comm.Chan.20.0.015 is (-0.18,47.6] THEN  is 1; (supportSize=4; laplace=0.666666666666667)",4.75476012622107
+"2009-12-04","2009-12-07","Venta por banda superior",32066.6325,"IF Comm.Chan.20.0.015 is (91.6,124] THEN  is -1; (supportSize=4; laplace=0.5)",4.54069005641948
+"2009-12-07","2009-12-08","Compra",31994.331284305,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.80539736643737
+"2009-12-24","2009-12-28","Venta por banda superior",32502.35978766,"IF Comm.Chan.20.0.015 is (91.6,124] THEN  is -1; (supportSize=4; laplace=0.5)",4.55656876001983
+"2009-12-28","2009-12-29","Compra",32781.2742044775,"IF Dif.Aroon.25 is (76.5, Inf] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",4.81593377413119
+"2010-03-26","2010-03-26","Venta fin periodo",33126.6710742187,"No aplica",0

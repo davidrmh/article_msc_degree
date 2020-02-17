@@ -1,0 +1,5 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla"
+"2012-05-25","2012-05-28","Compra",37766.1897899137,"IF Comm.Chan.20.0.015 is (-67.7,-15] THEN  is 1; (supportSize=2; laplace=0.75)"
+"2012-06-20","2012-06-21","Venta por banda superior",38648.3615479763,"IF MFI.14 is (62.3,74.9] THEN  is -1; (supportSize=4; laplace=0.833333333333333)"
+"2012-06-21","2012-06-22","Compra",38922.567665765,"IF Comm.Chan.20.0.015 is (101, Inf] THEN  is 1; (supportSize=1; laplace=0.666666666666667)"
+"2012-07-24","2012-07-25","Venta por banda superior",40560.80868189,"IF MFI.14 is (62.3,74.9] THEN  is -1; (supportSize=4; laplace=0.833333333333333)"
