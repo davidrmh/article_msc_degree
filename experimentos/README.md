@@ -37,3 +37,24 @@ import metricas as met
 ```python
 met.evaluaMetrica(...)
 ```
+
+# Observaciones
+
+## Sobre el ordenamiento de las reglas:
+
+* La primera vez que ordenan las reglas, no existen penalizaciones (o recompensas) por el desempeño de estas, así que
+se utiliza la suma (normalizada) ```Laplace + Soporte```.
+
+* Una vez que se tienen penalizaciones (o recompensas), se utilizan estas (normalizadas nuevamente) para ordenar las reglas.
+
+* Ver la función ```ordenaReglas``` del archivo ```evaluaReglas.R``` y ```actualizaLista.R``` del archivo ```auxFun.R```.
+
+## Sobre las posiciones abiertas
+
+* Se vende si hay una ganancia (la que sea) o se cae debajo de la banda inferior (pánico)
+
+* En otro caso la última compra no se considera (NO HAY GANANCIA PERO LA PÉRDIDA ESTÁ DENTRO DEL RIESGO TOLERADO)
+
+## Sobre los archivos log
+
+* Los archivos log incluyen el precio de ejecución considerando el costo de transacción.
