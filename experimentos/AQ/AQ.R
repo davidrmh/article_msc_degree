@@ -98,6 +98,7 @@ AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.
   n_modelos <- length(conjuntos[['entrenamiento']])
   
   #Abre el archivo CSV que contiene en el nombre de cada archivo
+  #de entrenamiento, prueba y etiquetado.
   datos_csv <- read.csv(arch_csv, stringsAsFactors = FALSE)
 
   #Para acumular las reglas (en forma de string)
@@ -143,6 +144,8 @@ AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.
         reglasVenta <- reglasAcum[str_detect(reglasAcum, "THEN  is -1;")]
         
         #top_k reglas de compra
+        #Si top_k es 0 o es mayor al número de reglas, entonces se ordenan todas las reglas
+        #en otro caso se utiliza top_k
         if(top_k == 0 || top_k > length(reglasCompra)){
           reglasCompra <- ordenaReglas(reglasCompra, length(reglasCompra), lista_ganancia_reglas)
         }
@@ -167,6 +170,8 @@ AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.
         etiquetado <- evaluaReglas(reglasAcum, prueba, etiquetado, glob_tipoEjec, glob_h, ruta_dest = ruta_dest, prefijo = aux1, boolForzar = boolForzar)
       }
       
+      #Si no se acumulan las reglas, sólo se usan las que se aprenden con el conjunto de entrenamiento
+      #inmediato anterior.
       else{
         etiquetado <- evaluaReglas(as.character(reglas), prueba, etiquetado, glob_tipoEjec, glob_h, ruta_dest = ruta_dest, prefijo = aux1, boolForzar = boolForzar)
         #predicciones <- reglas.predice(reglas, entrena, prueba, metodoDisc, param)

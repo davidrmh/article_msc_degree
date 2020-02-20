@@ -160,21 +160,23 @@ actualizaLista <- function(nombre_log, lista, reglas){
     soporte_compra <- as.numeric(str_replace_all(str_extract(regla_compra, "supportSize=."), "supportSize=",""))
     
     #Extrae los valores de laplace de cada regla
-    laplace_compra <-as.numeric(str_replace_all(str_extract(regla_compra, "laplace=\\d{1,2}\\.\\d{1,}"),"laplace=",""))
+    #laplace_compra <-as.numeric(str_replace_all(str_extract(regla_compra, "laplace=\\d{1,2}\\.\\d{1,}"),"laplace=",""))
     
     #Actualiza log
-    df_log$puntaje_regla[indices_compra[i]] <- lista[[regla_compra]] + soporte_compra + laplace_compra
+    #df_log$puntaje_regla[indices_compra[i]] <- lista[[regla_compra]] + soporte_compra + laplace_compra
+    df_log$puntaje_regla[indices_compra[i]] <- lista[[regla_compra]]
     
     #Para la regla de venta sólo se actuliza si no fue venta por fin de periodo
     if(!str_detect(regla_venta, "No aplica")){
       lista[[regla_venta]] <- lista[[regla_venta]] + ganancia
       
       #obtiene soporte y laplace de la regla de venta
-      soporte_venta <- as.numeric(str_replace_all(str_extract(regla_venta, "supportSize=."), "supportSize=",""))
-      laplace_venta <-as.numeric(str_replace_all(str_extract(regla_venta, "laplace=\\d{1,2}\\.\\d{1,}"),"laplace=",""))
+      #soporte_venta <- as.numeric(str_replace_all(str_extract(regla_venta, "supportSize=."), "supportSize=",""))
+      #laplace_venta <-as.numeric(str_replace_all(str_extract(regla_venta, "laplace=\\d{1,2}\\.\\d{1,}"),"laplace=",""))
       
       #Actualiza log
-      df_log$puntaje_regla[indices_venta[i]] <- lista[[regla_venta]] + soporte_venta + laplace_venta
+      #df_log$puntaje_regla[indices_venta[i]] <- lista[[regla_venta]] + soporte_venta + laplace_venta
+      df_log$puntaje_regla[indices_venta[i]] <- lista[[regla_venta]]
       
       #Agrega a la memoria 
       memoria <- c(memoria, regla_venta)
@@ -202,24 +204,3 @@ actualizaLista <- function(nombre_log, lista, reglas){
   write.csv(x = df_log, file = nombre_log, row.names = FALSE)
   return(lista)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

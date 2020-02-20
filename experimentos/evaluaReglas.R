@@ -153,13 +153,18 @@ ordenaReglas <- function(reglas, top_k = length(reglas), lista_gan = list()){
   #Extrae los valores de laplace de cada regla
   laplace <-as.numeric(str_replace_all(str_extract(reglas, "laplace=\\d{1,2}\\.\\d{1,}"),"laplace=",""))
   
+  #Esto está vectorizado
   suma <- supportSize + laplace
   
   #agrega la ganancia de cada regla
   for(i in 1:length(reglas)){
     regla <- reglas[i]
-    #Efecto multiplicativo (la suma podría ser otra opción -ver función agregaReglas de auxFun.R-)
-    suma[i] <- suma[i] + lista_gan[[regla]]
+    
+    #Sólo se considera supportSize + laplace cuando no se ha aplicado la regla en ninguna ocasión
+    #if(lista_gan[[regla]] != 0){
+     # suma[i] <- lista_gan[[regla]] 
+    #}
+    suma[i] <- lista_gan[[regla]] + suma[i]
   }
   
   #Normaliza la suma
@@ -209,7 +214,6 @@ evaluaReglas <- function(reglas, atributos, etiquetado, tipoEjec = 'open', h = 0
   #Clasifica las reglas de acuerdo a su tipo (cuidado con los espacios!)
   reglasCompra <- reglas[str_detect(reglas, "THEN  is 1;")]
   reglasVenta <- reglas[str_detect(reglas, "THEN  is -1;")]
-  #PODRÍA ORDENAR LAS REGLAS DE ACUERDO A supportSize o laplace (ver str_extract)
   
   #Variables auxiliares
   ultimaOperacion <- "espera"
@@ -229,13 +233,14 @@ evaluaReglas <- function(reglas, atributos, etiquetado, tipoEjec = 'open', h = 0
   nombre_log <- str_c(ruta_dest, "/log/", prefijo, "_log.csv")
   
   #Obtiene la clase de cada observación
-  for(i in 1:(n_obs -1)){
+  #El loop termina en el índice n_obs - 1
+  for(i in 1:(n_obs - 1)){
     
     observacion <- atributos[i,]
     fechaSignal <- atributos[i, 'Date']
     indiceEjecucion <- which(atributos[, 'Date'] == fechaSignal) + h
     
-    glob_indice_tabla <- i
+    glob_indice_tabla <- i # No recuerdo porque hice esto xD
     glob_tabla_log[glob_indice_tabla, 'fechaSen'] <- as.character(fechaSignal)
     
     #Para evitar out of bounds
@@ -274,8 +279,8 @@ evaluaReglas <- function(reglas, atributos, etiquetado, tipoEjec = 'open', h = 0
       ## La señal de venta de acuerdo a las reglas, utiliza información del tiempo t
       ## La señal de venta de acuerdo a las bandas, utiliza el precio de ejecución en t + h (futuro)
       ## Una señal de venta se interpreta entonces como:
-      ## 1. En el día t, las reglas me dicen que venta
-      ## 2. En el transcurso del día t + h, espero que el precio de ejecución rebase las bandas horizontales
+      ## 1. En el día t, las reglas señalan una venta
+      ## 2. En el transcurso del día t + h, se espera que el precio de ejecución rebase las bandas horizontales
       ## si este es el caso, la venta se ejectua. (Esto se interpreta como una confirmación de la señal de las reglas)
       ##################################################################################################################
       diferencia_porcentual <- ( precioEjec * (1 - comision) ) / ( (ultimoPrecioCompra * (1 + comision) ) ) - 1
@@ -300,10 +305,13 @@ evaluaReglas <- function(reglas, atributos, etiquetado, tipoEjec = 'open', h = 0
     }
   }
   
-  #Agrega a la columna 'Clase' de 'etiquetado'
+  #Agrega las clases de acuerdo a las señales generadas
+  #por las reglas
   etiquetado$Clase <- clases
   
   #Cierra posiciones abiertas
+  #Se vende si hay una ganancia (la que sea) o se cae debajo de la banda inferior (pánico)
+  #En otro caso la última compra no se considera (NO HAY GANANCIA PERO LA PÉRDIDA ESTÁ DENTRO DEL RIESGO TOLERADO)
   if(ultimaOperacion == 'compra'){
     
     observacion <- atributos[n_obs,]
@@ -330,9 +338,8 @@ evaluaReglas <- function(reglas, atributos, etiquetado, tipoEjec = 'open', h = 0
       etiquetado$Clase[n_obs] <- -1
       
     }
-    
+    #La última compra no se considera
     else{
-      #La última compra no se considera
       glob_tabla_log[indiceUltimaCompra, 'accion'] <- "espera"
       etiquetado$Clase[indiceUltimaCompra] <- 0
     }
