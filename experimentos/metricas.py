@@ -81,7 +81,7 @@ def precioEjecucion(datos, fecha, tipo = 'open', h = 0):
 	SALIDA
 	float que representa el precio de ejecución
 	'''
-	indiceFecha = datos[datos['Date']==fecha].index[0];
+	indiceFecha = datos[datos['Date']==fecha].index[0]
 	ultimoIndice = datos.shape[0] - 1
 
 	#Para evitar error 'out of bounds'
@@ -125,7 +125,7 @@ def buyHold(datos, tipoEjec = 'open', h = 0, version = 'normal'):
 
     version: String que representa la versión de buy-and-hold que se calcula.
     'normal' => Compra al inicio y venta al final del periodo
-    'mod' => Compra = primera compra. Venta = última venta
+    'mod' => Compra = primera compra con reglas. Venta = venta en el último período
 
     SALIDA
     float que representa la ganancia de buy-and-hold
@@ -138,7 +138,8 @@ def buyHold(datos, tipoEjec = 'open', h = 0, version = 'normal'):
         #Al menos hay una compra y una venta
         if len(datos[datos['Clase'] == 1].index) > 0 and len(datos[datos['Clase'] == -1].index) > 0:
             indiceInicio = datos[datos['Clase'] == 1].index[0]
-            indiceFin = datos[datos['Clase'] == -1].index[-1]
+            #indiceFin = datos[datos['Clase'] == -1].index[-1] #última venta de las reglas
+            indiceFin = datos.shape[0] - 1 #último índice
             fechaInicio = datos.loc[indiceInicio,'Date']
             fechaFin = datos.loc[indiceFin,'Date']
         else:
@@ -197,7 +198,7 @@ def excessReturn(datos, flagOper = True, tipoEjec = 'open', h = 0, flagTot = Fal
 
     version: String que representa la versión de buy-and-hold que se calcula.
     'normal' => Compra al inicio y venta al final del periodo
-    'mod' => Compra = primera compra. Venta = última venta
+    'mod' => Compra = primera compra con reglas. Venta = venta en el último período
 
     SALIDA:
     exceso. Float. Exceso de ganancia
@@ -295,8 +296,8 @@ def excessReturn(datos, flagOper = True, tipoEjec = 'open', h = 0, flagTot = Fal
     ganancia = (efectivo - capital) / capital
     '''
     #Si al final del episodio hay una posición abierta, sólo se vende cuando:
-    # 1. La venta genera ganancias
-    # 2. La diferencia entre los precios de compra y venta rebasa el umbral de riesgo
+    # 1. La venta genera ganancias (la que sea) o cuando 
+    # 2. La diferencia entre los precios de compra y venta rebasa el límite inferior.
     if flagPosicionAbierta:
 
         #cálculo del precio de ejecución
@@ -364,7 +365,7 @@ def evaluaMetrica(ruta_pred = './AQ/AQ_resultados/', ruta_arch = 'arch_evaluar.c
 
     version: String que representa la versión de buy-and-hold que se calcula.
     'normal' => Compra al inicio y venta al final del periodo
-    'mod' => Compra = primera compra. Venta = última venta
+    'mod' => Compra = primera compra con reglas. Venta = venta en el último período
 
 	SALIDA
 	Crea un CSV con el resultado de las métricas para cada archivo
