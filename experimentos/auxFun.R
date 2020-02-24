@@ -9,6 +9,52 @@ library(stringr)
 AUX_FUN_R <- "AUX_FUN_R"
 
 ##==============================================================================================
+## Función para actualizar los límites de riesgo de acuerdo a la historia inmediata anterior
+## de los precios
+##
+## ENTRADA
+## datos: Dataframe, debe contener la columna Date y los precios
+##(idealmente contiene el etiquetado del periodo inmediato anterior al conjunto de prueba)
+##
+## precio_ejec: string que indica el tipo de precio de precio de ejecución a considerar
+##
+## k: número positivo (mediana + k * semi desviación, mediana - k * semi desviación)
+##
+## SALIDA
+##
+## vector cuya primera componente es el límite superior, mientras que la segunda componente
+## es el límite inferior
+##==============================================================================================
+calculaLimites <- function(datos, precio_ejec = 'mid', k = 1){
+  
+  #Obtiene un vector con los precios de ejecución
+  precios_ejecucion <- preciosEjecucion(datos, datos$Date, precio_ejec)
+  
+  #Calcula las variaciones
+  n_obs <- length(precios_ejecucion)
+  variaciones <- precios_ejecucion[2:n_obs] / precios_ejecucion[1:(n_obs - 1)] - 1
+  
+  #Calcula la mediana
+  mediana <- median(variaciones)
+  
+  #Semi desviaciones estándar
+  #max(x - mediana , 0)^2
+  arriba <- sapply(variaciones - mediana, function(x){max(x,0)})^2
+  arriba <- sqrt(mean(arriba))
+  
+  #min(x - mediana, 0)^2
+  abajo <- sapply(variaciones - mediana, function(x){min(x,0)})^2
+  abajo <- sqrt(mean(abajo))
+  
+  #límites
+  lim_sup <- mediana + k * arriba
+  lim_inf <- mediana - k * abajo
+  
+  c(lim_sup, lim_inf)
+
+}
+
+##==============================================================================================
 ## Función para remover la clase ESPERA (Clase 0) de un conjunto de datos
 ##
 ## ENTRADA
