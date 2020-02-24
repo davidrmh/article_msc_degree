@@ -15,6 +15,7 @@ glob_bandaSuperior <- 0.035 #numero positivo
 glob_bandaInferior <- -0.03 #número negativo
 glob_tipoEjec <- 'mid'
 glob_h <- 1
+glob_k <- 1 #Para recalcular límites de venta
 ##==============================================================================================
 
 
@@ -84,12 +85,15 @@ AQ.fit <- function(entrena, confidence = 0.9, timesCovered = 1, metodoDisc = "un
 ##
 ## boolPenaliza: Booleano. TRUE => Se penalizan las reglas que generaron pérdidas
 ##
+## boolLimites: Booleano. TRUE => Se recalculan límites de venta.
+##
 ## SALIDA
 ## Crea archivos en ruta_dest
 ##==============================================================================================
 AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.9, timesCovered = 1, 
                     metodoDisc = "unsupervised.intervals", param = list(nOfIntervals = 8),
-                    ignoraEspera = TRUE, acumReglas = TRUE, top_k = 5, boolForzar = FALSE, boolPenaliza = TRUE){
+                    ignoraEspera = TRUE, acumReglas = TRUE, top_k = 5, boolForzar = FALSE,
+                    boolPenaliza = TRUE, boolLimites = TRUE){
   
   #Carga los conjuntos de entrenamiento, prueba y etiquetado
   conjuntos <- listaDatos(arch_csv, ruta_entrena, ruta_prueba, ruta_etiqueta)
@@ -128,6 +132,13 @@ AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.
       
       #Obtiene las predicciones para el conjunto de prueba
       prueba <- conjuntos[['prueba']][[i]]
+      
+      #recalcula límites de venta (el primero se calcula de forma manual)
+      if(boolLimites & i>1){
+        limites <- calculaLimites(datos = etiquetado, precio_ejec = glob_tipoEjec, k = glob_k)
+        glob_bandaSuperior <- limites[1]
+        glob_bandaInferior <- limites[2]
+      }
       
       #Acumula reglas
       if(acumReglas){
@@ -214,6 +225,7 @@ AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.
   write(paste("Banda inferior = ", glob_bandaInferior), arch_param, append = TRUE)
   write(paste("Acumula reglas = ", acumReglas, sep = ""), arch_param, append = TRUE)
   write(paste("Forzar primera compra = ", boolForzar, sep = ""), arch_param, append = TRUE)
+  write(paste("Recalcula límites de venta = ", boolLimites, sep = ""), arch_param, append = TRUE)
   
   if(acumReglas){
     write(reglasAcum, paste(ruta_dest,"reglas_acumuladas.txt", sep = ""))
