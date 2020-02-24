@@ -344,6 +344,7 @@ def excessReturn(datos, flagOper = True, tipoEjec = 'open', h = 0, flagTot = Fal
 def evaluaMetrica(ruta_pred = './AQ/AQ_resultados/', ruta_arch = 'arch_evaluar.csv', ruta_dest='./AQ/', metrica = 'exret', aux = 'AQ',
  dicc = {'flagOper': False, 'tipoEjec': 'open', 'h': 0},
   dicc_glob = {'capital':100000.0, 'comision':0.25 / 100, 'bandaSuperior':0.035, 'bandaInferior':-0.03, 'tasa':0}, version = 'normal'):
+
 	'''
 	ENTRADA
 
@@ -378,6 +379,10 @@ def evaluaMetrica(ruta_pred = './AQ/AQ_resultados/', ruta_arch = 'arch_evaluar.c
 
 	#nombre del archivo de salida
 	nombre_salida = ruta_dest +'-'.join(['metrica', metrica, aux]) + '.csv'
+	
+	#Archivo con los límites de venta
+	arch_limites = ruta_pred + 'limites_venta.csv'
+	limites = pd.read_csv(arch_limites)
 
 	#Obtiene los parámetros de la métrica
 	if metrica == 'exret' or metrica == 'totret':
@@ -395,6 +400,8 @@ def evaluaMetrica(ruta_pred = './AQ/AQ_resultados/', ruta_arch = 'arch_evaluar.c
 		nombre_pred = ruta_pred + arch_pred
 		datos = pd.read_csv(nombre_pred)
 
+		dicc_glob['bandaSuperior'] = limites['limite_superior'][i]
+		dicc_glob['bandaInferior'] = limites['limite_inferior'][i]
 		#Calcula la métrica correspondiente
 		if metrica == 'exret':
 			performance = excessReturn(datos, flagOper, tipoEjec, h, False, dicc_glob, version)
