@@ -112,6 +112,9 @@ AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.
   #(sólo se utiliza cuando se acumulan reglas)
   lista_ganancia_reglas <- list()
   
+  #Para guardar los límites de venta
+  df_limites <- data.frame()
+  
   #Ajusta modelos
   for(i in 1:n_modelos){
     
@@ -139,6 +142,9 @@ AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.
         glob_bandaSuperior <- limites[1]
         glob_bandaInferior <- limites[2]
       }
+      
+      #Guarda los límites de venta
+      df_limites <- rbind(df_limites,c(glob_bandaSuperior, glob_bandaInferior))
       
       #Acumula reglas
       if(acumReglas){
@@ -231,6 +237,11 @@ AQ.main <- function(ruta_dest = "./AQ_resultados_repeticiones/", confidence = 0.
     write(reglasAcum, paste(ruta_dest,"reglas_acumuladas.txt", sep = ""))
     write(paste("top_k = ",  top_k, sep = ""), arch_param, append = TRUE)
   }
+  
+  #Guarda el archivo con los límites de venta
+  names(df_limites) <- c('limite_superior', 'limite_inferior')
+  nombre_arch_lim <- paste(ruta_dest, "limites_venta.csv", sep = "")
+  write.csv(x = df_limites, file = nombre_arch_lim, row.names = FALSE)
   
   print("Predicciones guardadas")
 }
