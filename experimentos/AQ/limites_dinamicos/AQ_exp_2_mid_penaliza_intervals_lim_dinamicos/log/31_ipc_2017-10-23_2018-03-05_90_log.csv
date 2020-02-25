@@ -1,0 +1,15 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2017-10-26","2017-10-27","Compra",49201.2256202425,"IF MFI.14 is (41.8,46.1] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.131343327861715
+"2017-12-08","2017-12-11","Venta por banda inferior",47506.5765234375,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.132388996210488
+"2017-12-11","2017-12-13","Compra",48191.737490485,"IF Williams.R.14 is (-50.1,-37.6] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",0.0271125733814202
+"2017-12-27","2017-12-28","Venta por banda superior",48697.7551757813,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.0644630686816591
+"2018-01-03","2018-01-04","Compra",50041.1502734375,"IF MFI.14 is (41.8,46.1] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.137594228448548
+"2018-01-08","2018-01-09","Venta por banda inferior",49728.3480178275,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.0582121680948265
+"2018-01-09","2018-01-10","Compra",49354.7236423275,"IF MFI.14 is (41.8,46.1] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.125114548553901
+"2018-01-22","2018-01-23","Venta por banda superior",49970.6547946725,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.0706918479894733
+"2018-01-30","2018-01-31","Compra",50472.7030273437,"IF Comm.Chan.20.0.015 is (24.9,54.7] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0398760221214357
+"2018-02-01","2018-02-02","Venta por banda inferior",50081.37145032,"IF Williams.R.14 is (-38,-25.7] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.195113502955828
+"2018-02-02","2018-02-06","Compra",49318.9312600163,"IF Williams.R.14 is (-50.1,-37.6] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",0.0147690834919233
+"2018-02-22","2018-02-23","Venta por banda inferior",48710.1635306475,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.144732486099985
+"2018-02-23","2018-02-26","Compra",48598.3471827425,"IF Williams.R.14 is (-50.1,-37.6] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.00980921025919341
+"2018-03-05","2018-03-05","Venta fin periodo",47403.8827298663,"No aplica",0

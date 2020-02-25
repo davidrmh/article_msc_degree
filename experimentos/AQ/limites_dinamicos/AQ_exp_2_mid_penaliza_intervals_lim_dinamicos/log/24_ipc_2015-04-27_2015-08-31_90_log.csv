@@ -1,0 +1,13 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2015-04-28","2015-04-29","Compra",45250.1048732975,"IF Williams.R.14 is (-59.7,-47.7] THEN  is 1; (supportSize=3; laplace=0.8)",-0.00800641693418469
+"2015-05-21","2015-05-22","Venta por banda inferior",44887.8136673663,"IF Williams.R.14 is (-49.6,-37.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.337820899462281
+"2015-05-22","2015-05-25","Compra",44953.5822117887,"IF MFI.14 is (36.3,40.8] THEN  is 1; (supportSize=3; laplace=0.8)",0.0670661682538168
+"2015-06-12","2015-06-15","Venta por banda inferior",44346.4049564288,"IF Williams.R.14 is (-49.6,-37.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.351327659668828
+"2015-06-23","2015-06-24","Compra",45510.6393507113,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.448343408002362
+"2015-06-30","2015-07-01","Venta por banda inferior",45000.7357321725,"IF Williams.R.14 is (-49.6,-37.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.362531712738911
+"2015-07-08","2015-07-09","Compra",44822.95176257,"IF MFI.14 is (41.8,46.1] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.00751247652584248
+"2015-07-20","2015-07-21","Venta por banda superior",45412.4733398438,"IF Williams.R.14 is (-11.9, Inf] and Adj.Close.RSI.14 is (64.8,71.5] THEN  is -1; (supportSize=3; laplace=0.8)",0.773642182221659
+"2015-07-21","2015-07-22","Compra",45166.353046875,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.461697712560647
+"2015-07-31","2015-08-03","Venta por banda inferior",44563.1878125,"IF Williams.R.14 is (-49.6,-37.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.375886017297197
+"2015-08-12","2015-08-13","Compra",44146.3660794775,"IF MFI.14 is (41.8,46.1] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0381161834932833
+"2015-08-26","2015-08-27","Venta por banda inferior",42795.3236283038,"IF Williams.R.14 is (-49.6,-37.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.406489724264637

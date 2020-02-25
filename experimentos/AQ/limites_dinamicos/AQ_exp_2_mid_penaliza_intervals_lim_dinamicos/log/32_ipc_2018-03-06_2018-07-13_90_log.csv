@@ -1,0 +1,25 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2018-03-08","2018-03-09","Compra",48630.3077443912,"IF Williams.R.14 is (-50.1,-37.6] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0180064531330239
+"2018-03-13","2018-03-14","Venta por banda inferior",48231.6733007813,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.152929728973816
+"2018-03-14","2018-03-15","Compra",48263.9507764925,"IF Adj.Close.RSI.14 is (44.7,51.9] THEN  is 1; (supportSize=6; laplace=0.875)",-0.0390496984353445
+"2018-04-04","2018-04-05","Venta por banda inferior",47676.2060742188,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.165107445319407
+"2018-04-05","2018-04-06","Compra",47992.9977396337,"IF Williams.R.14 is (-25.5,-13.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",0.00973764549701528
+"2018-04-11","2018-04-12","Venta por banda superior",48460.3365379613,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.0804294934864885
+"2018-04-12","2018-04-13","Compra",48816.3165286962,"IF MFI.14 is (54.8,60.9] THEN  is 1; (supportSize=5; laplace=0.857142857142857)",-0.12486605786313
+"2018-04-13","2018-04-16","Venta por banda inferior",48487.8281840925,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.0737004248479196
+"2018-04-16","2018-04-17","Compra",48774.6227100862,"IF MFI.14 is (54.8,60.9] THEN  is 1; (supportSize=5; laplace=0.857142857142857)",-0.13126524171846
+"2018-04-19","2018-04-20","Venta por banda inferior",48462.50493189,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.0673012409925895
+"2018-04-20","2018-04-23","Compra",48794.7823585237,"IF Williams.R.14 is (-25.5,-13.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.00376377594971067
+"2018-04-23","2018-04-24","Venta por banda inferior",48135.9834375,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.178608866766133
+"2018-04-25","2018-04-26","Compra",48278.0797608675,"IF MFI.14 is (54.8,60.9] THEN  is 1; (supportSize=5; laplace=0.857142857142857)",-0.188362697255736
+"2018-06-07","2018-06-08","Venta por banda inferior",45521.5242482963,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.235706322303409
+"2018-06-08","2018-06-11","Compra",46260.6875290462,"IF Comm.Chan.20.0.015 is (24.9,54.7] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.029126530300782
+"2018-06-12","2018-06-13","Venta por banda superior",46757.9664112575,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.0780507328132432
+"2018-06-13","2018-06-14","Compra",47059.4568169075,"IF Williams.R.14 is (-25.5,-13.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0161592254501843
+"2018-06-15","2018-06-18","Venta por banda inferior",46476.1336964138,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.0656552833127695
+"2018-06-18","2018-06-19","Compra",46536.1655225862,"IF Williams.R.14 is (-25.5,-13.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.00590973660752714
+"2018-06-29","2018-07-02","Venta por banda superior",47013.13743189,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.0759047721554267
+"2018-07-02","2018-07-03","Compra",47068.1523294775,"IF Adj.Close.RSI.14 is (44.7,51.9] THEN  is 1; (supportSize=6; laplace=0.875)",-0.0257723319551839
+"2018-07-04","2018-07-05","Venta por banda superior",47693.0934375,"IF Williams.R.14 is (-38,-25.7] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.181836136475667
+"2018-07-10","2018-07-11","Compra",48995.8638867187,"IF Williams.R.14 is (-25.5,-13.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0182190221100362
+"2018-07-12","2018-07-13","Venta por banda inferior",48392.759809695,"IF Williams.R.14 is (-38,-25.7] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.194145421978176

@@ -1,0 +1,25 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2011-09-02","2011-09-05","Compra",34508.7207226562,"IF Comm.Chan.20.0.015 is (77.2,89.7] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0196050624995586
+"2011-09-05","2011-09-06","Venta por banda inferior",34050.2352834525,"IF Williams.R.14 is (-74.7,-54.9] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.044932045080855
+"2011-09-08","2011-09-09","Compra",34262.1155130713,"IF Adj.Close.RSI.14 is (49.1,51.3] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",0.249796500633862
+"2011-09-14","2011-09-15","Venta por banda superior",34843.5672951713,"IF Williams.R.14 is (-62.6,-40.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.101765078485621
+"2011-09-28","2011-09-29","Compra",33911.48330604,"IF Comm.Chan.20.0.015 is (-55.3,-39.8] THEN  is 1; (supportSize=3; laplace=0.8)",-0.0196720156945296
+"2011-09-29","2011-09-30","Venta por banda inferior",33244.3760742188,"IF Williams.R.14 is (-62.6,-40.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.121437094180151
+"2011-10-06","2011-10-07","Compra",33297.5969483675,"IF Comm.Chan.20.0.015 is (-55.3,-39.8] THEN  is 1; (supportSize=3; laplace=0.8)",0.0124292945228406
+"2011-10-14","2011-10-17","Venta por banda superior",34366.4934375,"IF Williams.R.14 is (-14.5,-6.99] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",0.00755398842047661
+"2011-10-26","2011-10-27","Compra",36518.9799318912,"IF Williams.R.14 is (-9.58,-5.54] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0656255294815913
+"2011-10-31","2011-11-01","Venta por banda inferior",35578.9858598737,"IF Comm.Chan.20.0.015 is (109, Inf] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",0.133054946033931
+"2011-11-03","2011-11-04","Compra",36643.334965695,"IF Comm.Chan.20.0.015 is (77.2,89.7] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.00830913195601768
+"2011-11-07","2011-11-08","Venta por banda superior",37057.2555323512,"IF Williams.R.14 is (-14.5,-6.99] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",0.0188499189640176
+"2011-11-09","2011-11-10","Compra",36839.037846805,"IF Comm.Chan.20.0.015 is (77.2,89.7] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0257752052492973
+"2011-11-17","2011-11-18","Venta por banda inferior",36195.6045117188,"IF Williams.R.14 is (-74.7,-54.9] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.0623981183741347
+"2011-11-22","2011-11-23","Compra",35717.7709670475,"IF Comm.Chan.20.0.015 is (-55.3,-39.8] THEN  is 1; (supportSize=3; laplace=0.8)",0.0259859100879392
+"2011-11-29","2011-11-30","Venta por banda superior",36201.98305689,"IF Williams.R.14 is (-74.7,-54.9] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.0488415028090361
+"2011-12-06","2011-12-07","Compra",37136.4651076725,"IF Williams.R.14 is (-9.58,-5.54] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0773432150964128
+"2011-12-07","2011-12-08","Venta por banda inferior",36701.311684695,"IF Williams.R.14 is (-14.5,-6.99] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",0.00713223334919599
+"2011-12-19","2011-12-20","Compra",36086.7320850863,"IF Comm.Chan.20.0.015 is (-55.3,-39.8] THEN  is 1; (supportSize=3; laplace=0.8)",0.0445354269431697
+"2011-12-21","2011-12-22","Venta por banda superior",36756.1235301488,"IF MFI.14 is (43.8,47.3] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.0706513230600831
+"2011-12-28","2011-12-29","Compra",36996.1503515625,"IF Adj.Close.RSI.14 is (49.1,51.3] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",0.261296762976077
+"2012-01-02","2012-01-03","Venta por banda superior",37421.6157862575,"IF Williams.R.14 is (-14.5,-6.99] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",0.0186324956914109
+"2012-01-04","2012-01-05","Compra",37277.3966358675,"IF Comm.Chan.20.0.015 is (77.2,89.7] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0336492420649149
+"2012-01-09","2012-01-10","Venta por banda inferior",36983.8730423663,"IF Williams.R.14 is (-62.6,-40.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.129311130995769

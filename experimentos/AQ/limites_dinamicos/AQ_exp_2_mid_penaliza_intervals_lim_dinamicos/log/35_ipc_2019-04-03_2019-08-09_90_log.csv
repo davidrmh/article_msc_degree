@@ -1,0 +1,17 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2019-04-03","2019-04-04","Compra",43730.2835451725,"IF Williams.R.14 is (-25.5,-13.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0174110157242395
+"2019-04-04","2019-04-05","Venta por banda superior",44404.345679085,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.160497740571686
+"2019-04-10","2019-04-11","Compra",44781.6691258512,"IF Williams.R.14 is (-25.5,-13.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0048942563471257
+"2019-04-17","2019-04-22","Venta por banda superior",45342.190502805,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.1730144999488
+"2019-04-22","2019-04-23","Compra",45299.5230321012,"IF MFI.14 is (54.8,60.9] THEN  is 1; (supportSize=5; laplace=0.857142857142857)",-0.164867167600658
+"2019-04-25","2019-04-26","Venta por banda inferior",44876.3891751788,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.350054844229477
+"2019-04-26","2019-04-29","Compra",45061.21194361,"IF Williams.R.14 is (-50.1,-37.6] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0581999492819324
+"2019-04-29","2019-04-30","Venta por banda inferior",44509.73194311,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.362293307792999
+"2019-06-03","2019-06-04","Compra",43429.2966258512,"IF Adj.Close.RSI.14 is (44.7,51.9] THEN  is 1; (supportSize=6; laplace=0.875)",-0.12251382198244
+"2019-06-04","2019-06-05","Venta por banda inferior",43130.7817092338,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.369166891751522
+"2019-06-05","2019-06-06","Compra",43275.5283984375,"IF Williams.R.14 is (-25.5,-13.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",0.00413755157018936
+"2019-06-11","2019-06-12","Venta por banda superior",43666.3846584525,"IF Williams.R.14 is (-15, Inf] THEN  is -1; (supportSize=5; laplace=0.857142857142857)",0.182046307866115
+"2019-06-12","2019-06-13","Compra",43696.4530859375,"IF MFI.14 is (54.8,60.9] THEN  is 1; (supportSize=5; laplace=0.857142857142857)",-0.177845012728406
+"2019-06-13","2019-06-14","Venta por banda inferior",43129.3672851563,"IF Adj.Close.RSI.14 is (51.9,59] THEN  is -1; (supportSize=7; laplace=0.888888888888889)",-0.38214473687927
+"2019-06-14","2019-06-17","Compra",43327.3784036963,"IF MFI.14 is (54.8,60.9] THEN  is 1; (supportSize=5; laplace=0.857142857142857)",-0.249897228857815
+"2019-08-09","2019-08-09","Venta fin periodo",40205.5447706325,"No aplica",0

@@ -1,0 +1,13 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2014-07-28","2014-07-29","Compra",44680.140546875,"IF MFI.14 is (57.7,62.1] THEN  is 1; (supportSize=3; laplace=0.8)",-0.0188473034318577
+"2014-07-30","2014-07-31","Venta por banda inferior",43838.04038061,"IF Williams.R.14 is (-38,-25.7] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.0753370116685099
+"2014-07-31","2014-08-01","Compra",44010.5762795475,"IF MFI.14 is (41.8,46.1] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0238573483181598
+"2014-08-19","2014-08-20","Venta por banda superior",44916.5112745388,"IF Williams.R.14 is (-11.9, Inf] and Adj.Close.RSI.14 is (64.8,71.5] THEN  is -1; (supportSize=3; laplace=0.8)",0.701292217390541
+"2014-08-20","2014-08-21","Compra",45408.2061723762,"IF MFI.14 is (57.7,62.1] THEN  is 1; (supportSize=3; laplace=0.8)",-0.00994702176724838
+"2014-09-09","2014-09-10","Venta por banda superior",45812.351997195,"IF Williams.R.14 is (-49.6,-37.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.218632038256842
+"2014-09-10","2014-09-11","Compra",45881.3783398437,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.45466728286607
+"2014-10-24","2014-10-27","Venta por banda inferior",43494.2516160863,"IF Williams.R.14 is (-49.6,-37.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.270660264306983
+"2014-10-28","2014-10-29","Compra",44233.4719726562,"IF MFI.14 is (36.3,40.8] THEN  is 1; (supportSize=3; laplace=0.8)",0.0893263900580808
+"2014-11-04","2014-11-05","Venta por banda superior",44872.7362209525,"IF MFI.14 is (64.2,69.7] THEN  is -1; (supportSize=3; laplace=0.8)",0.0910706061410952
+"2014-11-10","2014-11-11","Compra",44518.2133012825,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.472834816294077
+"2014-11-28","2014-12-01","Venta por banda inferior",43709.4271729763,"IF Williams.R.14 is (-49.6,-37.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.28882779773499

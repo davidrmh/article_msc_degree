@@ -1,0 +1,13 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2008-10-17","2008-10-20","Compra",20683.123784305,"IF Williams.R.14 is (-85.4,-77.2] and Adj.Close.RSI.14 is (32.3,37.5] THEN  is 1; (supportSize=3; laplace=0.8)",-0.0138278991787608
+"2008-10-20","2008-10-21","Venta por banda inferior",20397.1196339138,"IF Comm.Chan.20.0.015 is (-79.5,-67.2] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.0138278991787608
+"2008-10-21","2008-10-22","Compra",19438.50926545,"IF Williams.R.14 is (-85.4,-77.2] and Adj.Close.RSI.14 is (32.3,37.5] THEN  is 1; (supportSize=3; laplace=0.8)",-0.0028931421676357
+"2008-10-29","2008-10-30","Venta por banda superior",19651.0646409262,"IF Williams.R.14 is (-62.6,-40.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.220208401500409
+"2008-11-10","2008-11-11","Compra",19830.0511085237,"IF Adj.Close.RSI.14 is (49.1,51.3] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0764109249184618
+"2008-11-12","2008-11-13","Venta por banda inferior",18918.335625,"IF Williams.R.14 is (-62.6,-40.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.266184858067978
+"2008-11-25","2008-11-26","Compra",19594.193403195,"IF Adj.Close.RSI.14 is (49.1,51.3] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0437255373058453
+"2008-11-27","2008-11-28","Venta por banda superior",20234.637209535,"IF MFI.14 is (43.8,47.3] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.0891891303136817
+"2009-01-29","2009-01-30","Compra",19585.636909305,"IF Williams.R.14 is (-85.4,-77.2] and Adj.Close.RSI.14 is (32.3,37.5] THEN  is 1; (supportSize=3; laplace=0.8)",0.0207046855909254
+"2009-02-05","2009-02-06","Venta por banda superior",20047.8153956325,"IF Williams.R.14 is (-62.6,-40.4] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.242587030309416
+"2009-02-12","2009-02-13","Compra",19413.4173947063,"IF Williams.R.14 is (-85.4,-77.2] and Adj.Close.RSI.14 is (32.3,37.5] THEN  is 1; (supportSize=3; laplace=0.8)",-0.046088202965037
+"2009-02-26","2009-02-26","Venta fin periodo",18116.7391701713,"No aplica",0

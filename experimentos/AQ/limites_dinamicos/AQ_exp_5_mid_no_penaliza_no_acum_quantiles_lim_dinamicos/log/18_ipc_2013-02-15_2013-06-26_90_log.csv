@@ -1,0 +1,5 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla"
+"2013-02-22","2013-02-25","Compra",43814.4974609375,"IF Dif.Aroon.25 is [-Inf,-56] THEN  is 1; (supportSize=1; laplace=0.666666666666667)"
+"2013-04-10","2013-04-11","Venta por banda superior",44189.8383688913,"IF Williams.R.14 is (-4.27, Inf] THEN  is -1; (supportSize=2; laplace=0.75)"
+"2013-04-11","2013-04-12","Compra",44240.9672270637,"IF Adj.Close.RSI.14 is (55.4,69.6] THEN  is 1; (supportSize=1; laplace=0.666666666666667)"
+"2013-06-26","2013-06-26","Venta fin periodo",38361.9231886012,"No aplica"

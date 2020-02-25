@@ -1,0 +1,13 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2009-07-09","2009-07-10","Compra",23557.1414962687,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.255786617460925
+"2009-07-13","2009-07-14","Venta por banda superior",24121.86353766,"IF MFI.14 is (64.2,69.7] THEN  is -1; (supportSize=3; laplace=0.8)",0.10123612214143
+"2009-08-17","2009-08-18","Compra",27518.2637476212,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.230666739408213
+"2009-08-21","2009-08-24","Venta por banda superior",28209.5191771838,"IF Williams.R.14 is (-11.9, Inf] and Adj.Close.RSI.14 is (64.8,71.5] THEN  is -1; (supportSize=3; laplace=0.8)",0.42745789519506
+"2009-08-24","2009-08-25","Compra",28179.5387890625,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.237244035959441
+"2009-08-25","2009-08-26","Venta por banda inferior",27994.19360577,"IF MFI.14 is (64.2,69.7] THEN  is -1; (supportSize=3; laplace=0.8)",0.0946588255902016
+"2009-09-02","2009-09-03","Compra",28193.45337177,"IF Williams.R.14 is (-51.5,-39.7] THEN  is 1; (supportSize=3; laplace=0.8)",0.02826284380308
+"2009-09-09","2009-09-10","Venta por banda superior",29091.2088431475,"IF MFI.14 is (64.2,69.7] THEN  is -1; (supportSize=3; laplace=0.8)",0.126501518272767
+"2009-09-24","2009-09-25","Compra",28737.21955316,"IF MFI.14 is (36.3,40.8] THEN  is 1; (supportSize=3; laplace=0.8)",0.165478592356556
+"2009-10-08","2009-10-09","Venta por banda superior",29866.8001612575,"IF Williams.R.14 is (-11.9, Inf] and Adj.Close.RSI.14 is (64.8,71.5] THEN  is -1; (supportSize=3; laplace=0.8)",0.46676512900757
+"2009-10-26","2009-10-27","Compra",29875.2019459887,"IF MFI.14 is (58.7,64.2] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.203509447548178
+"2009-11-11","2009-11-12","Venta por banda superior",30883.02958734,"IF Williams.R.14 is (-11.9, Inf] and Adj.Close.RSI.14 is (64.8,71.5] THEN  is -1; (supportSize=3; laplace=0.8)",0.500499717418834

@@ -1,0 +1,13 @@
+
+confidence = 0.9
+times covered = 1
+Metodo discretizacion = unsupervised.quantiles
+Número intervalos = 8
+Ignora espera = TRUE
+Tipo de precio de ejecución = mid h = 1
+Banda superior =  0.00929939455358916
+Banda inferior =  -0.00623256897504465
+Acumula reglas = TRUE
+Forzar primera compra = FALSE
+Recalcula límites de venta = TRUE
+top_k = 5

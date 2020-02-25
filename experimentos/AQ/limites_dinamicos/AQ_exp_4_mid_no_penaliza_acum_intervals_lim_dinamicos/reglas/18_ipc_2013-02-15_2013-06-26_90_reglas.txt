@@ -1,0 +1,6 @@
+IF MFI.14 is (61,64.8] THEN  is 1; (supportSize=2; laplace=0.75)
+IF Williams.R.14 is (-23.1,-13.3] THEN  is 1; (supportSize=2; laplace=0.75)
+IF Adj.Close.RSI.14 is [-Inf,38.8] THEN  is 1; (supportSize=1; laplace=0.666666666666667)
+IF Adj.Close.RSI.14 is (85, Inf] THEN  is -1; (supportSize=2; laplace=0.75)
+IF MFI.14 is (64.8, Inf] THEN  is -1; (supportSize=3; laplace=0.8)
+IF Williams.R.14 is (-62.6,-52.7] THEN  is -1; (supportSize=1; laplace=0.666666666666667)

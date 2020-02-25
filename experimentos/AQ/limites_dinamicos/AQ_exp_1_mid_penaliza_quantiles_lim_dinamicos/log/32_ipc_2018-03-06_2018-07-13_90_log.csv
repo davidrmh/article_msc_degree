@@ -1,0 +1,15 @@
+"fechaSen","fechaEjec","accion","precioEjec","regla","puntaje_regla"
+"2018-03-15","2018-03-16","Compra",47761.8960351562,"IF Williams.R.14 is (-60.8,-54.1] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0464477941876261
+"2018-03-16","2018-03-20","Venta por banda inferior",47055.9753811088,"IF Comm.Chan.20.0.015 is (-85.8,-79.5] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.0147799964542402
+"2018-03-20","2018-03-21","Compra",47369.709028195,"IF Comm.Chan.20.0.015 is [-Inf,-76.4] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0415905330183579
+"2018-04-09","2018-04-10","Venta por banda superior",48174.320947515,"IF Williams.R.14 is (-14.5,-6.99] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",0.129787109126815
+"2018-04-11","2018-04-12","Compra",48703.2454930387,"IF MFI.14 is (54.9,59.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0670474690593473
+"2018-05-14","2018-05-15","Venta por banda inferior",46132.6995117188,"IF Comm.Chan.20.0.015 is (-85.8,-79.5] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.0675597641123795
+"2018-05-15","2018-05-16","Compra",46468.1462895637,"IF Comm.Chan.20.0.015 is [-Inf,-76.4] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0522075222095795
+"2018-05-16","2018-05-17","Venta por banda inferior",45974.7944826713,"IF Comm.Chan.20.0.015 is (-85.8,-79.5] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.0781767533036011
+"2018-05-17","2018-05-18","Compra",45701.8642673275,"IF Comm.Chan.20.0.015 is [-Inf,-76.4] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0660926151611894
+"2018-06-01","2018-06-04","Venta por banda inferior",45067.2896339138,"IF Comm.Chan.20.0.015 is (-85.8,-79.5] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.092061846255211
+"2018-06-04","2018-06-05","Compra",45427.9017725863,"IF Williams.R.14 is (-60.8,-54.1] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.0331947247770835
+"2018-06-08","2018-06-11","Venta por banda superior",46029.9609079537,"IF Williams.R.14 is (-7.4, Inf] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",0.122068030037531
+"2018-06-20","2018-06-21","Compra",46702.7567430387,"IF MFI.14 is (54.9,59.5] THEN  is 1; (supportSize=4; laplace=0.833333333333333)",-0.045842367615118
+"2018-07-04","2018-07-05","Venta por banda superior",47693.0934375,"IF MFI.14 is (43.8,47.3] THEN  is -1; (supportSize=4; laplace=0.833333333333333)",-0.458693004847343
