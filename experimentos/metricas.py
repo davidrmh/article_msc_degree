@@ -342,7 +342,7 @@ def excessReturn(datos, flagOper = True, tipoEjec = 'open', h = 0, flagTot = Fal
 ## Función para crear un CSV con los resultados de métrica en cada archivo
 ##==============================================================================
 def evaluaMetrica(ruta_pred = './AQ/AQ_resultados/', ruta_arch = 'arch_evaluar.csv', ruta_dest='./AQ/', metrica = 'exret', aux = 'AQ',
- dicc = {'flagOper': False, 'tipoEjec': 'open', 'h': 0},
+ dicc = {'flagOper': False, 'tipoEjec': 'mid', 'h': 1},
   dicc_glob = {'capital':100000.0, 'comision':0.25 / 100, 'bandaSuperior':0.035, 'bandaInferior':-0.03, 'tasa':0}, version = 'normal'):
 
 	'''
@@ -373,7 +373,10 @@ def evaluaMetrica(ruta_pred = './AQ/AQ_resultados/', ruta_arch = 'arch_evaluar.c
 	'''
 	#Abre el archivo en ruta_arch
 	archivos = pd.read_csv(ruta_arch)
-
+	
+	#Auxiliar para crear el nombre del archivo de acuerdo a la versión de BH
+	aux = aux + '_' + version
+    
 	#número de archivos
 	numArch = archivos.shape[0]
 
