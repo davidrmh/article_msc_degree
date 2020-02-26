@@ -44,3 +44,15 @@ en donde:
 * ```ruta_dest``` es un string que indica la ruta de la carpeta en donde se guardarán los archivos de entrenamiento.
 
 * ```activo```es un string que se utiliza como prefijo para el nombre de cada archivo de entrenamiento.
+
+## Conjuntos de prueba con ventanas deslizantes suaves
+
+Una vez etiquetados los conjuntos, en el caso de conjuntos creados con ventanas deslizantes suaves se utiliza la función ```bloquesPrueba``` del módulo ```datasets```
+
+```python
+bloquesPrueba(archivo = 'sub_bloques.csv', ruta = './data/training/..', size = 30, target = 'prueba')
+```
+
+Esta función crea la carpeta ```target``` dentro de ```ruta``` en la cual se separan los conjuntos de prueba a utilizar. Dentro de esta misma carpeta se crea el archivo ```entrena_prueba.csv``` el cual tiene la información necesaria para crear el archivo ```entrena_prueba.csv``` que se encuentra en la carpeta ```experimentos```.
+
+Esta función se debe de utilizar tanto para los archivos etiquetados como para los archivos de entrenamiento.
