@@ -9,6 +9,88 @@ import etiqueta as eti
 import pandas as pd
 import numpy as np
 from copy import deepcopy
+import os
+
+##==============================================================================
+## Función para crear conjuntos de prueba para ventanas deslizantes suaves
+##==============================================================================
+def bloquesPrueba(archivo = 'sub_bloques.csv', ruta = './data/training/', size = 30, target = 'prueba'):
+	'''
+	Función para crear conjuntos de entrenamiento utilizando bloques etiquetados
+	con una ventana deslizante suave
+
+	ENTRADA
+	archivo: string con la ruta del archivo CSV que contiene el nombre de los archivos de cada bloque
+
+	ruta: string con la ruta en donde se almacenan los archivos del archivo CSV.
+
+	size: Entero que representa el tamaño de cada sub bloque.
+
+	target: String con el nombre de la carpeta que se creará y contendrá cada sub bloque
+	esta carpeta se crea adentro de la ruta señalada por el parámetro ruta
+
+	SALIDA
+	crea un carpeta en ruta + target con los sub bloques creados.
+	'''
+	#Por seguridad para que los archivos se guarden dentro de la carpeta
+	#tiene que ser el nombre de una carpeta (terminar con /)
+	if target.find('/') == -1:
+		target = target + '/'
+	#Crea la carpeta destino
+	try:
+		os.mkdir(ruta + target)
+	except:
+		None
+
+	#lee el archivo csv con los nombres de cada bloque
+	nombres = pd.read_csv(archivo)
+
+	#Crea parejas entrenamiento - prueba
+	n_bloques = nombres.shape[0]
+	x1 = nombres['bloque'].iloc[0:(n_bloques - 1)]
+	x2 = nombres['bloque'].iloc[1:n_bloques]
+	parejas = zip(x1, x2)
+
+	#Para crear el archivo csv utilizado para evaluar
+	#los experimentos (archivo entrena_prueba.csv)
+	lista_entrena = []
+	lista_prueba = []
+
+	#Lee cada bloque
+	for pareja in parejas:
+		#Abre cada bloque
+		nom_bloque1 = pareja[0]
+		nom_bloque2 = pareja[1]
+		bloque1 = pd.read_csv(ruta + nom_bloque1)
+		bloque2 = pd.read_csv(ruta + nom_bloque2)
+
+		#Obtiene fechas (como conjuntos)
+		fechas1 = set(bloque1['Date'])
+		fechas2 = set(bloque2['Date'])
+
+		#Fechas para el conjunto de prueba
+		fechas3 = fechas2 - fechas2.intersection(fechas1)
+		fechas3 = list(fechas3)
+
+		#Crea el bloque de prueba
+		lista_indices = []
+		for i in range(len(bloque2['Date'])):
+			if bloque2['Date'][i] in fechas3:
+				lista_indices.append(i)
+
+		#slicing
+		bloque_prueba = bloque2.iloc[lista_indices,:].reset_index(drop = True)		
+		aux = nom_bloque2.replace('.csv','_prueba.csv')
+		nom_prueba = ruta + target + aux
+		bloque_prueba.to_csv(nom_prueba, index = False)
+		print 'Se crea prueba ' + nom_prueba
+
+		lista_entrena.append(nom_bloque1)
+		lista_prueba.append(nom_prueba)
+	aux_eval = pd.DataFrame({'entrena':lista_entrena, 'prueba':lista_prueba})
+	aux_eval.to_csv(ruta + target + 'entrena_prueba.csv', index = False)
+	print 'Conjuntos de prueba creados'
+
 
 ##==============================================================================
 ## Función para separar bloques de una manera deslizante (más suave que la función separaBloques)
