@@ -38,9 +38,6 @@ factor_c = [0.015]
 #Rezagos para el indicador cociente
 lags = [0, 1, 2, 3]
 
-
-
-
 ##==============================================================================
 ## Datos de Yaho Finance
 ## Lee datos, quita los null
@@ -73,6 +70,73 @@ def leeTabla(ruta="naftrac.csv"):
     data["Volume"]=data["Volume"].astype('int')
     data=data.reset_index(drop=True)
     return data
+
+##==============================================================================
+## Función para calcular cambios variaciones acumuladas
+##==============================================================================
+def variacionesAcum(datos, start, end = '', colName = 'Adj Close', resName = ''):
+    '''
+    Función para calcular cambios variaciones acumuladas
+
+    ENTRADA
+    datos: Pandas dataframe que contiene al menos una columna de fechas (DATE) y otra
+    columna numérica
+
+    start: String en formato YYYY-MM-DD que representa la fecha de inicio de
+    los valores del MA
+
+    end: String en formato YYYY-MM-DD que representa la fecha final
+
+    colName: String con el tipo de precios que se utilizarán para el cálculo
+
+    resName: String que representa el nombre de la nueva columna
+
+    SALIDA
+    resultado: Dataframe datos con la columna resName añadida e iniciando en el
+    renglón correspondiente a la fecha start
+    '''
+    #Localiza la fecha de inicio y revisa si hay suficiente información
+    indiceInicio=datos[datos['Date']==start].index[0]
+
+    #Nombre de la columna con las variaciones
+    if resName=='':
+        resName=colName + "_var_acum"
+
+    #Último índice
+    if end=='':
+        lastIndex=datos.shape[0] - 1
+    else:
+        lastIndex=datos[datos['Date']==end].index[0]
+        
+    #Número de observaciones    
+    n_obs = datos.shape[0]
+    
+    #Obtiene los precios
+    if colName == 'mid':
+      precios = (datos['High'] + datos['Low']) / 2.0
+    else:
+      precios = datos[colName]
+    
+    #calcula las variaciones entre los precios
+    var_acum = np.zeros(n_obs)
+    var_acum[1:] = precios.iloc[1:n_obs].reset_index(drop = True)\
+    / precios.iloc[0:(n_obs - 1)].reset_index(drop = True) - 1
+    var_acum = pd.Series(var_acum)
+    
+  
+    #Añade la nueva columna
+    resultado=deepcopy(datos)
+    resultado[resName]=var_acum
+
+    #Filtra a partir del índice correspondiente a la fecha start
+    resultado=resultado.iloc[indiceInicio:lastIndex+1,:]
+    resultado=resultado.reset_index(drop=True)
+
+    #añade metadatos
+    resultado.tipo = 'variacionesAcum'
+    resultado.resName = resName
+
+    return resultado
 
 ##==============================================================================
 ## Función para calcular un simple moving average
@@ -840,9 +904,6 @@ def cociente(datos, start, end='', lagNum = 0, lagDen = 1, colName = 'Open'):
 
     return resultado
 
-
-
-
 ##==============================================================================
 ## Función para crear una lista con la información de distintos indicadores
 ##==============================================================================
@@ -867,8 +928,13 @@ def creaIndicadores (datos, dicc = {}, start = '', end = ''):
     resultado = []
     for key in dicc.keys():
         tipo = dicc[key]['tipo']
+        
+        if tipo == 'variacionesAcum':
+          #Variaciones acumuladas en los precios
+          colName = dicc[key]['parametros']['colName']
+          resultado.append(variacionesAcum(datos, start, end, colName))
 
-        if tipo == 'simpleMA':
+        elif tipo == 'simpleMA':
             #simpleMA(datos,start,end,window,colName='Adj Close')
             window = dicc[key]['parametros']['window']
             colName = dicc[key]['parametros']['colName']
@@ -967,7 +1033,12 @@ def combinaIndicadores(listaIndicadores):
     columnas = []
 
     for element in listaIndicadores:
-        if element.tipo == 'simpleMA':
+      
+        if element.tipo == 'variacionesAcum':
+          key = element.resName
+          columnas.append(element[key])
+          
+        elif element.tipo == 'simpleMA':
             key = element.resName
             columnas.append(element[key])
 
@@ -1030,6 +1101,9 @@ def combinaIndicadores(listaIndicadores):
 ##==============================================================================
 def creaDiccionario(num_indicadores = 30):
   '''
+  Función para crear un diccionario con la información de distintos indicadores
+  El diccionario se crea de manera ALEATORIA.
+  
   ENTRADA
   num_indicadores: Entero que representa el número de indicadores
 
@@ -1167,10 +1241,12 @@ def creaDiccionario(num_indicadores = 30):
   return dicc      
 
 ##==============================================================================
-## Función para crear la matriz de atributos
+## Función para crear la matriz de atributos (DE MANERA ALEATORIA)
 ##==============================================================================
 def creaAtributos(datos, start, end='', num_indicadores = 100):
   '''
+  Función para crear la matriz de atributos (DE MANERA ALEATORIA)
+  
   ENTRADA
   datos: Pandas data frame creado con la función leeTabla
 
