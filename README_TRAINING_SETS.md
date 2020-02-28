@@ -50,7 +50,7 @@ en donde:
 Una vez etiquetados los conjuntos, en el caso de conjuntos creados con ventanas deslizantes suaves se utiliza la función ```bloquesPrueba``` del módulo ```datasets```
 
 ```python
-bloquesPrueba(archivo = 'sub_bloques.csv', ruta = './data/training/..', size = 30, target = 'prueba')
+dat.bloquesPrueba(archivo = 'sub_bloques.csv', ruta = './data/training/..', size = 30, target = 'prueba')
 ```
 
 Esta función crea la carpeta ```target``` dentro de ```ruta``` en la cual se separan los conjuntos de prueba a utilizar. Dentro de esta misma carpeta se crea el archivo ```entrena_prueba.csv``` el cual tiene la información necesaria para crear el archivo ```entrena_prueba.csv``` que se encuentra en la carpeta ```experimentos```.
